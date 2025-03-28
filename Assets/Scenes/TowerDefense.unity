@@ -5838,6 +5838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret
       objectReference: {fileID: 0}
+    - target: {fileID: 3621442388672074590, guid: b34030d90c628134b931041c784215bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4110135022682835428, guid: b34030d90c628134b931041c784215bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -7579,7 +7583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4281784526680307423, guid: 101a339f0ebe6c940a6fdcda48f69aee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectMissileTurret
+      value: SelectLaserBeamer
       objectReference: {fileID: 0}
     - target: {fileID: 4281784526680307423, guid: 101a339f0ebe6c940a6fdcda48f69aee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -17511,63 +17515,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2512581656808154719, guid: 1445f6e08425c0d42a16b493e840c362, type: 3}
   m_PrefabInstance: {fileID: 2146540246}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1050363914507763057
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -75
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759740561097377416, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3244634382497094706, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
-      propertyPath: m_Name
-      value: Laser Beamer
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b30e7113daf33e1468c901fb1b54b066, type: 3}
 --- !u!1001 &1929710724140507544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17779,6 +17726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Missile Launcher
       objectReference: {fileID: 0}
+    - target: {fileID: 6319739964463925675, guid: b0c3278d5e8d50f47b3511f38d5bb4c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6701332808897794833, guid: b0c3278d5e8d50f47b3511f38d5bb4c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35
@@ -17903,4 +17854,3 @@ SceneRoots:
   - {fileID: 1634526494}
   - {fileID: 679447929}
   - {fileID: 8333434292878721369}
-  - {fileID: 1050363914507763057}
