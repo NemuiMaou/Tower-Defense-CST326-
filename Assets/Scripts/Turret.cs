@@ -4,6 +4,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
+    private Enemy targetEnemy;
     
     [Header("General")]
     
@@ -16,7 +17,13 @@ public class Turret : MonoBehaviour
 
     [Header("Use Laser")] 
     public bool useLaser = false;
+
+    public int damageOverTime = 30;
+    public float slowPct = .5f;
+    
     public LineRenderer linerenderer;
+    public ParticleSystem impactEffect;
+    public Light impactLight;
     
     [Header("Unity Setup Fields")]
     
@@ -42,7 +49,11 @@ public class Turret : MonoBehaviour
             if (useLaser)
             {
                 if (linerenderer.enabled)
+                {
                     linerenderer.enabled = false;
+                    impactEffect.Stop();
+                    impactLight.enabled = false;
+                }
             }
             
             return;
@@ -78,10 +89,24 @@ public class Turret : MonoBehaviour
 
     void Laser()
     {
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+        
         if (!linerenderer.enabled)
+        {
             linerenderer.enabled = true;
+            impactEffect.Play();
+            impactLight.enabled = true;
+        }
+
         linerenderer.SetPosition(0, firePoint.position);
         linerenderer.SetPosition(1, target.position);
+
+        Vector3 dir = firePoint.position - target.position;
+        
+        impactEffect.transform.position = target.position + dir.normalized;
+        
+        impactEffect.transform.rotation = Quaternion.LookRotation(dir);
+
     }
 
     void UpdateTarget()
@@ -103,6 +128,7 @@ public class Turret : MonoBehaviour
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
+            targetEnemy = nearestEnemy.GetComponent<Enemy>();
         }
         else
         {
